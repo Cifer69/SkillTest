@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="client">
+          <Key>
+            <PropertyRef Name="client_id" />
+          </Key>
+          <Property Name="client_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="client_name" Type="varchar" MaxLength="45" />
+          <Property Name="client_phone" Type="varchar" MaxLength="45" />
+          <Property Name="client_address" Type="varchar" MaxLength="150" />
+          <Property Name="client_del_flag" Type="int" />
+          <Property Name="client_del_date" Type="datetime" />
+          <Property Name="client_type_flag" Type="int" />
+          <Property Name="client_add_user" Type="varchar" MaxLength="45" />
+          <Property Name="client_add_date" Type="datetime" />
+          <Property Name="client_edit_date" Type="datetime" />
+          <Property Name="client_edit_user" Type="varchar" MaxLength="45" />
+          <Property Name="client_number" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityContainer Name="Database1ModelStoreContainer">
+          <EntitySet Name="client" EntityType="Self.client" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="client">
+          <Key>
+            <PropertyRef Name="client_id" />
+          </Key>
+          <Property Name="client_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="client_phone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="client_address" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="client_del_flag" Type="Int32" />
+          <Property Name="client_del_date" Type="DateTime" Precision="3" />
+          <Property Name="client_type_flag" Type="Int32" />
+          <Property Name="client_add_user" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="client_add_date" Type="DateTime" Precision="3" />
+          <Property Name="client_edit_date" Type="DateTime" Precision="3" />
+          <Property Name="client_edit_user" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="client_number" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="client_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="clients" EntityType="Self.client" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+          <EntitySetMapping Name="clients">
+            <EntityTypeMapping TypeName="Database1Model.client">
+              <MappingFragment StoreEntitySet="client">
+                <ScalarProperty Name="client_id" ColumnName="client_id" />
+                <ScalarProperty Name="client_name" ColumnName="client_name" />
+                <ScalarProperty Name="client_phone" ColumnName="client_phone" />
+                <ScalarProperty Name="client_address" ColumnName="client_address" />
+                <ScalarProperty Name="client_del_flag" ColumnName="client_del_flag" />
+                <ScalarProperty Name="client_del_date" ColumnName="client_del_date" />
+                <ScalarProperty Name="client_type_flag" ColumnName="client_type_flag" />
+                <ScalarProperty Name="client_add_user" ColumnName="client_add_user" />
+                <ScalarProperty Name="client_add_date" ColumnName="client_add_date" />
+                <ScalarProperty Name="client_edit_date" ColumnName="client_edit_date" />
+                <ScalarProperty Name="client_edit_user" ColumnName="client_edit_user" />
+                <ScalarProperty Name="client_number" ColumnName="client_number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

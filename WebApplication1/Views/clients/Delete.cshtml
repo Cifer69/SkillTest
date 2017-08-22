@@ -1,0 +1,112 @@
+﻿@model WebApplication1.Models.client
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.client_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client_phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client_del_flag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client_del_flag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client_del_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client_del_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client_type_flag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client_type_flag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client_add_user)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client_add_user)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client_add_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client_add_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client_edit_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client_edit_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client_edit_user)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client_edit_user)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client_number)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
